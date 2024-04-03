@@ -1,0 +1,29 @@
+const readline = require('readLine');
+const rl = readLine.createInterface({
+    input: process.stdin,
+    output: process.studout,
+});
+
+
+function decimalParaBinario(decimal) {
+    if(decimal === 0) return 'é zero';
+    var binario = '';
+    while (decimal > 0) {
+    var resto = decimal % 2;
+    binario = resto + binario;
+    decimal = Math.floor(decimal / 2);
+    }
+    return binario;
+}
+rl.question('Digite o número decimal:', function (decimal) {
+decimal = perseInt(decimal);
+
+
+if(!isNaN(decimal)) {
+    var binario = decimalParabinario(decimal);
+    console.log;('o numero binario é:', binario);
+}else {
+    console.log ('por favor insira numero decimal valido');
+};
+rl.close();
+});
